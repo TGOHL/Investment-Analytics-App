@@ -35,8 +35,9 @@ Recreate an interactive investment page in Flutter, following the provided scree
 
 ## Screenshots:
 - Included screenshots for demonstrating the app's functionality.
-- ![Investment 1](screenshots/Investment 1.png)
-- ![Investment 2](screenshots/Investment 2.png)
+- ![Investment 1](screenshots/Investment_1.png)
+- ![Investment 2](screenshots/Investment_2.png)
+- ![Investment 3](screenshots/Investment_3.png)
 - ![Home](screenshots/Home.png)
 
 
