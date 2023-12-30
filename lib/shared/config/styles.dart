@@ -51,4 +51,24 @@ class AppStyles {
     fontSize: 14.sp,
     color: const Color(0xFF46AF35),
   );
+  static TextStyle selectTabTextStyle = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 12.sp,
+    color: AppThemes.fontMain,
+  );
+  static TextStyle unselectTabTextStyle = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 12.sp,
+    color: AppThemes.fontSecondary,
+  );
+  static TextStyle cardSubtitleTextStyle = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 23.sp,
+    color: AppThemes.fontSecondary,
+  );
+  static TextStyle cardTitleTextStyle = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 23.sp,
+    color: AppThemes.fontMain,
+  );
 }

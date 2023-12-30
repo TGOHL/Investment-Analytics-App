@@ -23,6 +23,7 @@ class AppThemes {
 
   static const Color fontMain = Color(0xFF1C2C56);
   static const Color fontSecondary = Color(0xFF77809A);
+  static Color unselected = fontSecondary.withOpacity(0.6);
 
   static const List<Color> mainGradient = [mainLight, main];
   static const List<Color> secondaryGradient = [secondaryLight, secondaryDark];
@@ -46,6 +47,13 @@ class AppThemes {
           titleMedium: TextStyle(color: Colors.black, fontFamily: fontFamily),
           titleSmall: TextStyle(color: fontSecondary, fontFamily: fontFamily),
         ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.white,
+          selectedItemColor: fontMain,
+          unselectedItemColor: unselected,
+          unselectedLabelStyle: AppStyles.unselectTabTextStyle,
+          selectedLabelStyle: AppStyles.selectTabTextStyle,
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       );
 
@@ -68,6 +76,13 @@ class AppThemes {
           titleLarge: TextStyle(color: fontSecondary, fontFamily: fontFamily),
           titleMedium: TextStyle(color: fontMain, fontFamily: fontFamily),
           titleSmall: TextStyle(color: fontSecondary, fontFamily: fontFamily),
+        ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.white,
+          selectedItemColor: fontMain,
+          unselectedItemColor: unselected,
+          unselectedLabelStyle: AppStyles.unselectTabTextStyle,
+          selectedLabelStyle: AppStyles.selectTabTextStyle,
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       );
