@@ -34,12 +34,14 @@ Recreate an interactive investment page in Flutter, following the provided scree
 - Contributions are welcome! Feel free to open issues, submit pull requests, or suggest improvements.
 
 ## Screenshots:
-- Included screenshots for demonstrating the app's functionality.
+- Investment Scren.
 <p float="left">
   <img src="screenshots/Investment_1.png" width="250" />
   <img src="screenshots/Investment_2.png" width="250" />
   <img src="screenshots/Investment_3.png" width="250" />
 </p>
+
+- Home Scren.
 <p float="left">
   <img src="screenshots/Home.png" width="250" />
 </p>
