@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:investment_analytics/screens/calculator/calculator_layout.dart';
+import 'package:investment_analytics/screens/home/home_layout.dart';
+import 'package:investment_analytics/screens/splash/widgets/nav_bar.dart';
 import 'package:investment_analytics/shared/helpers/toast_helper.dart';
 
 import 'cubit/splash_cubit.dart';

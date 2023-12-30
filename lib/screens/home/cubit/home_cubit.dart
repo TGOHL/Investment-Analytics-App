@@ -8,7 +8,6 @@ part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   int _carouselPageIndex = 0;
-  int _shownPage = 0;
   final List<BundleModel> _items = [
     BundleModel(
       id: 1,
@@ -46,14 +45,11 @@ class HomeCubit extends Cubit<HomeState> {
   BundleModel get bundleSelected => items[carouselPageIndex];
   HomeCubit() : super(HomeInitial());
 
-  int get shownPage => _shownPage;
+
 
   void init() {}
 
-  void onPageChanged(int i) {
-    _shownPage = i;
-    emit(HomeIPageChangedState(i));
-  }
+
 
   void onCardChaged(int index, CarouselPageChangedReason reason) {
     _carouselPageIndex = index;

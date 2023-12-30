@@ -10,3 +10,9 @@ class SplashErrorState extends SplashState {
 
   SplashErrorState(this.error);
 }
+
+class SplashPageChangedState extends SplashState {
+  final int index;
+
+  SplashPageChangedState(this.index);
+}

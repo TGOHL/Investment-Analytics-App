@@ -7,7 +7,7 @@ import '../../screens/splash/splash_layout.dart';
 class AppRouter {
   static Map<String, Widget Function(dynamic)> router() {
     return {
-      '/': (ctx) => const HomeScreen(),
+      '/': (ctx) => const SplashScreen(),
       SplashScreen.routeName: (ctx) => const SplashScreen(),
       CalculatorScreen.routeName: (ctx) => const CalculatorScreen(),
       HomeScreen.routeName: (ctx) => const HomeScreen(),

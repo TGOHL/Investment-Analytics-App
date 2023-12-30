@@ -5,55 +5,42 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> _pages = [
-      Scaffold(
-        resizeToAvoidBottomInset: false,
-        body: SafeArea(
-          child: Scaffold(
-            body: SingleChildScrollView(
-              physics: const BouncingScrollPhysics(),
-              child: BlocBuilder<HomeCubit, HomeState>(
-                buildWhen: (_, current) {
-                  return true;
-                },
-                builder: (context, state) {
-                  final cubit = context.read<HomeCubit>();
-                  return Column(
-                    children: [
-                      WidgetSpacer(space: 8.h),
-                      const HomeHeader(),
-                      const HomeCarouselSection(),
-                      const HomeSectionTitle(text: 'Conditions'),
-                      CustomGridView(
-                        data: [
-                          MyDataModel(
-                            imageAsset: AppAssets.arrow,
-                            title: cubit.bundleSelected.minimumDepositText,
-                          ),
-                          MyDataModel(
-                            imageAsset: AppAssets.arrow,
-                            title: cubit.bundleSelected.subscriptionText,
-                          ),
-                        ],
-                        columns: 2,
-                      ),
-                      const HomeSectionTitle(text: 'What You Get'),
-                      CustomGridView(
-                        data: cubit.bundleSelected.benefits,
-                        columns: 3,
-                      ),
-                    ],
-                  );
-                },
+    return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      child: BlocBuilder<HomeCubit, HomeState>(
+        buildWhen: (_, current) {
+          return true;
+        },
+        builder: (context, state) {
+          final cubit = context.read<HomeCubit>();
+          return Column(
+            children: [
+              WidgetSpacer(space: 8.h),
+              const HomeHeader(),
+              const HomeCarouselSection(),
+              const HomeSectionTitle(text: 'Conditions'),
+              CustomGridView(
+                data: [
+                  MyDataModel(
+                    imageAsset: AppAssets.arrow,
+                    title: cubit.bundleSelected.minimumDepositText,
+                  ),
+                  MyDataModel(
+                    imageAsset: AppAssets.arrow,
+                    title: cubit.bundleSelected.subscriptionText,
+                  ),
+                ],
+                columns: 2,
               ),
-            ),
-            bottomNavigationBar: const HomeNavBar(),
-          ),
-        ),
+              const HomeSectionTitle(text: 'What You Get'),
+              CustomGridView(
+                data: cubit.bundleSelected.benefits,
+                columns: 3,
+              ),
+            ],
+          );
+        },
       ),
-      CalculatorScreen(),
-    ];
-
-    return _pages[context.watch<HomeCubit>().shownPage];
+    );
   }
 }

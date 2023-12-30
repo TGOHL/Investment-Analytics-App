@@ -5,14 +5,23 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<Widget> pages = [
+      const HomeScreen(),
+      const CalculatorScreen(),
+    ];
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: BlocBuilder<SplashCubit, SplashState>(
-        buildWhen: (_, current) {
-          return true;
-        },
         builder: (context, state) {
-          return Center();
+          return Scaffold(
+            resizeToAvoidBottomInset: false,
+            body: SafeArea(
+              child: Scaffold(
+                body: pages[context.watch<SplashCubit>().shownPage],
+                bottomNavigationBar: const SpalshNavBar(),
+              ),
+            ),
+          );
         },
       ),
     );

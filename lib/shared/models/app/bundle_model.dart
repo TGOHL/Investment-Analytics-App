@@ -31,7 +31,7 @@ class BundleModel {
 
   String get subscriptionText {
     String val = 'No Monthly Subscription';
-    if (minimumDeposit > 0) {
+    if (subscription > 0) {
       val = '\$${moneyFormat.format(subscription)}/Month (Paid Annually)';
     }
     return val;

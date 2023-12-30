@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:investment_analytics/screens/calculator/calculator_layout.dart';
 import 'package:investment_analytics/screens/home/cubit/home_cubit.dart';
 import 'package:investment_analytics/screens/home/widgets/carousel_section.dart';
 import 'package:investment_analytics/screens/home/widgets/header.dart';
-import 'package:investment_analytics/screens/home/widgets/nav_bar.dart';
 import 'package:investment_analytics/screens/home/widgets/section_title.dart';
 import 'package:investment_analytics/shared/config/assets.dart';
 import 'package:investment_analytics/shared/helpers/toast_helper.dart';
