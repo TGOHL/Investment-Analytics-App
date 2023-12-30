@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../config/themes.dart';
 
 class MainButton extends StatelessWidget {
-  final int width;
+  final double? width;
   final int height;
   final String label;
   final int fontSize;
@@ -20,9 +20,9 @@ class MainButton extends StatelessWidget {
     Key? key,
     required this.label,
     required this.onPressed,
-    this.width = 280,
-    this.height = 45,
-    this.fontSize = 19,
+    this.width,
+    this.height = 60,
+    this.fontSize = 16,
     this.borderRadius = 4,
     this.fontColor = Colors.white,
     this.filled = true,
@@ -34,35 +34,12 @@ class MainButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width.w,
       height: height.h,
+      width: width,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        // border: filled
-        //     ? null
-        //     : Border.all(color: AppThemes.secondaryLight, width: 2.w),
         borderRadius: BorderRadius.circular(borderRadius.w),
-        boxShadow: filled
-            ? [
-                BoxShadow(
-                  color: Colors.black38,
-                  blurRadius: 6.w,
-                  offset: Offset(-3.w, 3.w),
-                ),
-              ]
-            : [],
-        gradient: color == null && filled
-            ? LinearGradient(
-                begin: verticalGradient
-                    ? Alignment.topCenter
-                    : Alignment.centerLeft,
-                end: verticalGradient
-                    ? Alignment.bottomCenter
-                    : Alignment.centerRight,
-                colors: AppThemes.secondaryGradient,
-              )
-            : null,
-        color: color,
+        color: AppThemes.fontMain,
       ),
       child: Material(
         color: Colors.transparent,
@@ -86,9 +63,7 @@ class MainButton extends StatelessWidget {
                   label,
                   style: TextStyle(
                     fontSize: fontSize.sp,
-                    color: fontColor,
-                    // fontWeight: FontWeight.bold,
-                    // fontStyle: FontStyle.italic,
+                    color: Colors.white,
                   ),
                 ),
               ],
