@@ -17,17 +17,17 @@ Recreate an interactive investment page in Flutter, following the provided scree
 
 - Challenge: Implementing exponential incrementation based on long presses.
 - Solution: Utilized Flutter's GestureDetector and Timer for precise control over incrementation duration.
-## Data Handling and Mock Service:
+### Data Handling and Mock Service:
 
 - Challenge: Simulating API calls with a mock data service.
 - Solution: Implemented a mock service with asynchronous methods and Future.delayed to mimic network delays.
-## Responsive Design:
+### Responsive Design:
 
 - Challenge: Ensuring responsiveness on different devices.
 - Solution: Employed responsive design principles, including flexible layouts and media queries.
 
-## Investment Calculator:
-### The investment calculator allows users to dynamically adjust investment parameters and see real-time updates. Exponential incrementation provides a smooth user experience during long presses on the increment/decrement buttons.
+### Investment Calculator:
+- The investment calculator allows users to dynamically adjust investment parameters and see real-time updates. Exponential incrementation provides a smooth user experience during long presses on the increment/decrement buttons.
 
 
 ## Contribution:
