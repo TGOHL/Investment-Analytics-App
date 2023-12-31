@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:investment_analytics/shared/cubit/calculator_cubit.dart';
+import 'package:investment_analytics/shared/cubit/home_cubit.dart';
+import 'package:investment_analytics/shared/cubit/splash_cubit.dart';
 import 'package:investment_analytics/shared/config/router.dart';
 import 'package:investment_analytics/shared/config/themes.dart';
-import 'package:investment_analytics/shared/cubit/main_cubit.dart';
 import 'package:investment_analytics/shared/helpers/initialization_helper.dart';
 
 
@@ -22,7 +24,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-         BlocProvider(create: (_) => MainCubit()),
+         BlocProvider(create: (_) => SplashCubit()),
+         BlocProvider(create: (_) => HomeCubit()),
+         BlocProvider(create: (_) => CalculatorCubit()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(375, 825),

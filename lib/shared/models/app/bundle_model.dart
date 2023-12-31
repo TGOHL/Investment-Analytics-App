@@ -37,38 +37,38 @@ class BundleModel {
     return val;
   }
 
-  List<MyDataModel> get benefits {
-    List<MyDataModel> items = [];
+  List<InfoModel> get benefits {
+    List<InfoModel> items = [];
     switch (type) {
       case BundleType.Strandard:
-        items.add(MyDataModel.swissAccount());
-        items.add(MyDataModel.mastercardPrepaid());
-        items.add(MyDataModel.openSameDay());
-        items.add(MyDataModel.protected());
-        items.add(MyDataModel.investments(false));
-        items.add(MyDataModel.swissAccount(false));
+        items.add(InfoModel.swissAccount());
+        items.add(InfoModel.mastercardPrepaid());
+        items.add(InfoModel.openSameDay());
+        items.add(InfoModel.protected());
+        items.add(InfoModel.investments(false));
+        items.add(InfoModel.swissAccount(false));
         break;
       case BundleType.Plus:
-        items.add(MyDataModel.swissAccount());
-        items.add(MyDataModel.mastercardCredit());
-        items.add(MyDataModel.protected());
-        items.add(MyDataModel.investments());
-        items.add(MyDataModel.fixedIncome());
+        items.add(InfoModel.swissAccount());
+        items.add(InfoModel.mastercardCredit());
+        items.add(InfoModel.protected());
+        items.add(InfoModel.investments());
+        items.add(InfoModel.fixedIncome());
 
         break;
       case BundleType.Max:
-        items.add(MyDataModel.swissAccount());
-        items.add(MyDataModel.mastercardCredit());
-        items.add(MyDataModel.protected());
-        items.add(MyDataModel.investments());
-        items.add(MyDataModel.fixedIncome());
+        items.add(InfoModel.swissAccount());
+        items.add(InfoModel.mastercardCredit());
+        items.add(InfoModel.protected());
+        items.add(InfoModel.investments());
+        items.add(InfoModel.fixedIncome());
         break;
       case BundleType.Unlimited:
-        items.add(MyDataModel.swissAccount());
-        items.add(MyDataModel.mastercardCredit());
-        items.add(MyDataModel.protected());
-        items.add(MyDataModel.investments());
-        items.add(MyDataModel.fixedIncome());
+        items.add(InfoModel.swissAccount());
+        items.add(InfoModel.mastercardCredit());
+        items.add(InfoModel.protected());
+        items.add(InfoModel.investments());
+        items.add(InfoModel.fixedIncome());
         break;
       default:
     }
@@ -142,69 +142,69 @@ class BundleModel {
       subscription.hashCode;
 }
 
-class MyDataModel {
+class InfoModel {
   final String imageAsset;
   final String title;
   final bool isActive;
 
-  MyDataModel({
+  InfoModel({
     required this.imageAsset,
     required this.title,
     this.isActive = true,
   });
 
-  factory MyDataModel.swissAccount([bool isActive = true]) {
-    return MyDataModel(
+  factory InfoModel.swissAccount([bool isActive = true]) {
+    return InfoModel(
       imageAsset: AppAssets.subscription,
       title: 'Swiss Bank Account',
       isActive: isActive,
     );
   }
-  factory MyDataModel.mastercardPrepaid([bool isActive = true]) {
-    return MyDataModel(
+  factory InfoModel.mastercardPrepaid([bool isActive = true]) {
+    return InfoModel(
       imageAsset: AppAssets.mastercardPrepaid,
       title: 'Mastercard Prepaid',
       isActive: isActive,
     );
   }
-  factory MyDataModel.mastercardCredit([bool isActive = true]) {
-    return MyDataModel(
+  factory InfoModel.mastercardCredit([bool isActive = true]) {
+    return InfoModel(
       imageAsset: AppAssets.mastercardCredit,
       title: 'Mastercard Prepaid',
       isActive: isActive,
     );
   }
-  factory MyDataModel.openSameDay([bool isActive = true]) {
-    return MyDataModel(
+  factory InfoModel.openSameDay([bool isActive = true]) {
+    return InfoModel(
       imageAsset: AppAssets.accountOpenSameDay,
       title: 'Account Open Same Day',
       isActive: isActive,
     );
   }
-  factory MyDataModel.protected([bool isActive = true]) {
-    return MyDataModel(
+  factory InfoModel.protected([bool isActive = true]) {
+    return InfoModel(
       imageAsset: AppAssets.protection,
       title: 'Protected up to \$100,000',
       isActive: isActive,
     );
   }
 
-  factory MyDataModel.investments([bool isActive = true]) {
-    return MyDataModel(
+  factory InfoModel.investments([bool isActive = true]) {
+    return InfoModel(
       imageAsset: AppAssets.investmentsPortfolios,
       title: 'Investments Portfolios',
       isActive: isActive,
     );
   }
-  factory MyDataModel.options([bool isActive = true]) {
-    return MyDataModel(
+  factory InfoModel.options([bool isActive = true]) {
+    return InfoModel(
       imageAsset: AppAssets.depositOptions,
       title: 'Deposits Options',
       isActive: isActive,
     );
   }
-  factory MyDataModel.fixedIncome([bool isActive = true]) {
-    return MyDataModel(
+  factory InfoModel.fixedIncome([bool isActive = true]) {
+    return InfoModel(
       imageAsset: AppAssets.depositOptions,
       title: 'Fixed Income Deposit',
       isActive: isActive,

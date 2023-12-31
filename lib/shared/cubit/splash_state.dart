@@ -1,9 +1,11 @@
-part of 'splash_cubit.dart';
+part of '../../../shared/cubit/splash_cubit.dart';
 
 @immutable
 abstract class SplashState {}
 
 class SplashInitial extends SplashState {}
+
+class SplashInitializedState extends SplashState {}
 
 class SplashErrorState extends SplashState {
   final Exception error;

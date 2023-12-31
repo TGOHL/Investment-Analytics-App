@@ -8,7 +8,7 @@ import 'package:investment_analytics/shared/widgets/rounded_container.dart';
 import 'package:investment_analytics/shared/widgets/widget_spacer.dart';
 
 class CustomGridView extends StatelessWidget {
-  final List<MyDataModel> data;
+  final List<InfoModel> data;
   final int columns;
 
   const CustomGridView({super.key, required this.data, required this.columns});
@@ -56,7 +56,7 @@ class CustomGridView extends StatelessWidget {
 }
 
 class GridItem extends StatelessWidget {
-  final MyDataModel dataModel;
+  final InfoModel dataModel;
   final int maxLines;
 
   const GridItem({super.key, required this.dataModel, required this.maxLines});

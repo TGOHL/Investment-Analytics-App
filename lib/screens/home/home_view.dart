@@ -5,6 +5,9 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (!context.watch<HomeCubit>().isInitialized) {
+      return const LoadingScreen();
+    }
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: BlocBuilder<HomeCubit, HomeState>(
@@ -13,6 +16,7 @@ class HomeView extends StatelessWidget {
         },
         builder: (context, state) {
           final cubit = context.read<HomeCubit>();
+
           return Column(
             children: [
               WidgetSpacer(space: 8.h),
@@ -21,12 +25,12 @@ class HomeView extends StatelessWidget {
               const HomeSectionTitle(text: 'Conditions'),
               CustomGridView(
                 data: [
-                  MyDataModel(
-                    imageAsset: AppAssets.arrow,
+                  InfoModel(
+                    imageAsset: AppAssets.deposit,
                     title: cubit.bundleSelected.minimumDepositText,
                   ),
-                  MyDataModel(
-                    imageAsset: AppAssets.arrow,
+                  InfoModel(
+                    imageAsset: AppAssets.subscription,
                     title: cubit.bundleSelected.subscriptionText,
                   ),
                 ],

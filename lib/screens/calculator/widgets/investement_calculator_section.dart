@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:investment_analytics/screens/calculator/cubit/calculator_cubit.dart';
+import 'package:investment_analytics/shared/cubit/calculator_cubit.dart';
 import 'package:investment_analytics/screens/calculator/widgets/label_value_tile.dart';
 import 'package:investment_analytics/screens/calculator/widgets/select_term_section.dart';
 import 'package:investment_analytics/shared/config/constants.dart';

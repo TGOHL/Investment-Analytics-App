@@ -13,13 +13,13 @@ class SplashView extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: BlocBuilder<SplashCubit, SplashState>(
         builder: (context, state) {
-          return Scaffold(
-            resizeToAvoidBottomInset: false,
-            body: SafeArea(
-              child: Scaffold(
-                body: pages[context.watch<SplashCubit>().shownPage],
-                bottomNavigationBar: const SpalshNavBar(),
-              ),
+          if (!context.read<SplashCubit>().isInitialized) {
+            return const LoadingScreen();
+          }
+          return SafeArea(
+            child: Scaffold(
+              body: pages[context.watch<SplashCubit>().shownPage],
+              bottomNavigationBar: const SpalshNavBar(),
             ),
           );
         },

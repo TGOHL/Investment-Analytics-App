@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:investment_analytics/screens/splash/cubit/splash_cubit.dart';
+import 'package:investment_analytics/shared/cubit/splash_cubit.dart';
 
 class SpalshNavBar extends StatelessWidget {
   const SpalshNavBar({super.key});

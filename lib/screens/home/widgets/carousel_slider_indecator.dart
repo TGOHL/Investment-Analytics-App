@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:investment_analytics/screens/home/cubit/home_cubit.dart';
+import 'package:investment_analytics/shared/cubit/home_cubit.dart';
 import 'package:investment_analytics/shared/config/themes.dart';
 
 class CarouselSliderIndecator extends StatelessWidget {

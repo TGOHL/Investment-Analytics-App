@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:investment_analytics/screens/home/cubit/home_cubit.dart';
+import 'package:investment_analytics/shared/cubit/home_cubit.dart';
 import 'package:investment_analytics/screens/home/widgets/carousel_slider_indecator.dart';
 import 'package:investment_analytics/shared/config/assets.dart';
 import 'package:investment_analytics/shared/config/styles.dart';

@@ -1,10 +1,11 @@
-part of 'home_cubit.dart';
+part of '../../../shared/cubit/home_cubit.dart';
 
 @immutable
 sealed class HomeState {}
 
 final class HomeInitial extends HomeState {}
 
+final class HomeInitializedState extends HomeState {}
 final class HomeUpdateState extends HomeState {}
 
 class HomeErrorState extends HomeState {

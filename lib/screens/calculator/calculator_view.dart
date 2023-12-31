@@ -5,6 +5,9 @@ class CalculatorView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if(!context.watch<CalculatorCubit>().isInitialized){
+      return const LoadingScreen();
+    }
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
