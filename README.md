@@ -10,6 +10,8 @@ Recreate an interactive investment page in Flutter, following the provided scree
 - Responsive design for various device sizes.
 - Snap scrolling for seamless navigation through different sections.
 - Dynamic card updates with a brief, semi-transparent overlay.
+- Live Data Simulation as it is loading from the back-end.
+- Add local persistence to save the user's last input and restore it when the app is reopened.
 
 
 ## Challenges and Solutions:
